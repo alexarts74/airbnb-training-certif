@@ -1,7 +1,13 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
+User.destroy_all
+
+user = User.create!(email: "john@gmail.com", password: "qwertz")
+
+
+Flat.destroy_all
+
+Flat.create!(name: "Appart de Cyril région parisienne", address: "175 chemin de fessy", description: "Très bel appartement belle vue !", price: 250, user: user)
+Flat.create!(name: "Appart de Bastin plage", address: "175 chemin de fessy", description: "Très bel appartement belle vue !", price: 200, user: user)
+Flat.create!(name: "Appart de Marie montagne", address: "175 chemin de fessy", description: "Très bel appartement belle vue !", price: 350, user: user)
+Flat.create!(name: "Appart de Tristan vers Carcan", address: "175 chemin de fessy", description: "Très bel appartement belle vue !", price: 300, user: user)
+Flat.create!(name: "Appart de Boris à Bayonne", address: "175 chemin de fessy", description: "Très bel appartement belle vue !", price: 230, user: user)
+Flat.create!(name: "Appart de Véro à Bali", address: "175 chemin de fessy", description: "Très bel appartement belle vue !", price: 210, user: user)

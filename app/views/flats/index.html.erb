@@ -1,0 +1,8 @@
+<h1>Voici tous les appartements disponibles à la location</h1>
+
+<% @flats.each do |flat| %>
+  <%= flat.name %>
+  <%= flat.address %>
+  <%= flat.description %>
+  <%= flat.price %>
+<% end %>
